@@ -6,9 +6,9 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("i", help="Ip address of Redis database")
-parser.add_argument("-q", "--queue", default="hello", help="Name of redis Queue")
-parser.add_argument("-p", "--app_port", default="3000", help="Define application port")
+parser.add_argument("i", help="Redis IP address")
+parser.add_argument("-q", "--queue", default="hello", help="Redis queue name")
+parser.add_argument("-p", "--app_port", default="3000", help="Define application port, default: 3000")
 args = vars(parser.parse_args())
 
 RABBIT_IP = args["i"]
