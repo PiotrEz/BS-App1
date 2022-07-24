@@ -34,6 +34,8 @@ def test_post():
         return jsonify(result="OK"), 200
     except pika.exceptions.ChannelWrongStateError:
         conenction_up()
+
+
 if __name__ == '__main__':
     channel = conenction_up()
     app.run(host='0.0.0.0',port=APP_PORT)
